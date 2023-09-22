@@ -1,0 +1,51 @@
+
+
+
+<div class="container">
+
+  <div class="p-col-12">
+    <h1>Atividades Físicas</h1>
+  </div>
+
+  <div class="p-grid">
+    <div class="p-col-12">
+      <p-table [value]="activities" responsiveLayout="stack" [breakpoint]="'768px'">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Usuário</th>
+            <th>Tipo</th>
+            <th>Data</th>
+            <th>Distância</th>
+            <th>Duração</th>
+            <td class="col-actions">
+              <a pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+              <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"></button>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-activity>
+          <tr>
+            <span class="p-column-title">Usuário</span>
+            <td>{{ activity.user }}</td>
+            <span class="p-column-title">Tipo</span>
+            <td>{{ activity.type }}</td>
+            <span class="p-column-title">Data</span>
+            <td>{{ activity.activity_date }}</td>
+            <span class="p-column-title">Distância</span>
+            <td>{{ activity.distance }}</td>
+            <span class="p-column-title">Duração</span>
+            <td>{{ activity.duration }}</td>
+            <td class="col-actions">
+              <a pButton icon="pi pi-pencil"></a>
+              <button pButton icon="pi pi-trash"></button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="p-col-12">
+      <p><a pButton label="Nova Atividade"></a></p>
+    </div>
+  </div>
+</div>
+
